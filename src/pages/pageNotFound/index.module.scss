@@ -1,0 +1,13 @@
+@import '../../theme/variables.scss';
+@import '../../theme/mixins.scss';
+
+.container {
+    @include flex(center, center);
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    p{
+        font-size: 60px;
+        color: red;
+    }
+}

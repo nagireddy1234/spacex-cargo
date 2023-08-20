@@ -1,0 +1,11 @@
+@import '../../theme/variables.scss';
+@import '../../theme/mixins.scss';
+
+
+.container{
+    @include flex(flex-start, center);
+    background-color: $black-semi;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
