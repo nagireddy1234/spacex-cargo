@@ -34,12 +34,12 @@ const shipmentsReducer = createReducer(initialState, (shipments) => {
     state.selectedShipment = payload[0];
     state.cargoInput = boxes || String(0);
     state.cargoBaysCount = tempCargoBaysCount;
+    state.searchValue = '';
     state.isLoading = false;
-    state.searchValue='';
   });
 
   shipments.addCase(selectShipment, (state, { payload }) => {
-    const tempShipment = state.data.find(({ id },) => id === payload);
+    const tempShipment = state.data.find(({ id }) => id === payload);
     state.shipmentId = payload;
     state.selectedShipment = tempShipment;
     state.cargoInput = tempShipment?.boxes || String(0);

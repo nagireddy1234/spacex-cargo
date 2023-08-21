@@ -9,7 +9,7 @@ import styles from './index.module.scss';
 import { Icomponent } from '../../interfaces/appState';
 
 const Sidebar = ({ isMobile, showShipments, setShowShipments }: Icomponent) => {
-    const { shipmentId, filteredData } = useSelector(selectShipmentData);
+    const { shipmentId, filteredData, isLoading } = useSelector(selectShipmentData);
     const { handleSelectShipment } = useHelper(setShowShipments);
 
     return (
@@ -40,7 +40,7 @@ const Sidebar = ({ isMobile, showShipments, setShowShipments }: Icomponent) => {
                             );
                         })
                     ) : (
-                        <h1 className={styles.notFound}>Sorry, Nothing found!</h1>
+                        !isLoading && <h1 className={styles.notFound}>Sorry, Nothing found!</h1>
                     )}
                 </ul>
             </div>

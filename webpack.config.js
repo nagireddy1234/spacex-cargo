@@ -50,9 +50,6 @@ module.exports = {
     }),
     new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /en/),
   ],
-  resolve: {
-    extensions: ['.tsx', '.ts', '.js', '.jsx', '.css'],
-  },
   devServer: {
     historyApiFallback: true,
   },
